@@ -1,0 +1,53 @@
+/* 아바타 이미지 크기 설정 */
+img {
+  width: 64px;
+  height: 64px;
+  border-radius: 50%;
+}
+
+/* 상태 표시 원 공통 스타일 */
+.status {
+  width: 16px;
+  height: 16px;
+  border-radius: 50%;
+  border: 1px solid white;
+  position: absolute;
+  bottom: 5px;
+  right: 5px;
+}
+
+/* 오프라인 상태 */
+.offline {
+  background-color: #DBDBDB;
+}
+
+/* 온라인 상태 */
+.online {
+  background-color: #4CFE88;
+}
+
+/* 아바타 이미지 래퍼 */
+.group-wrapper {
+  float: left;
+  position: relative;
+  margin-right: 20px;
+}
+
+/* 그룹 클리어fix */
+.group:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+/* 컨테이너 중앙 정렬 */
+.container {
+  width: 100%;
+  text-align: center;
+}
+
+/* 그룹 가로 정렬 */
+.group {
+  margin-bottom: 20px;
+  text-align: left;
+}

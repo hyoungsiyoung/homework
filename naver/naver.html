@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>로그인 폼</title>
+    <link rel="stylesheet" href="naver.css">
+</head>
+<body>
+    <div class="container">
+        <div class="logo">
+            <img src="logo.svg" alt="로고 이미지">
+        </div>
+        <form class="login-form">
+            <div class="form-group">
+                <input type="text" name="username" placeholder="아이디(이메일)" required>
+            </div>
+            <div class="form-group">
+                <input type="password" name="password" placeholder="비밀번호" required>
+            </div>
+
+            <button type="submit">로그인</button>
+
+            <div class="options">
+                <div class="remember-me">
+                    <input type="checkbox" id="remember-me">
+                    <label for="remember-me">로그인 상태 유지</label>
+                </div>
+
+                <div class="ip-security">
+                    <a href="ip_security.html">IP 보안</a>
+                    <input type="checkbox" id="ip-security-switch">
+                    <label for="ip-security-switch">
+                        <span class="switch-label"></span>
+                    </label>
+                </div>
+            </div>
+        </form>
+    </div>
+    
+</body>
+</html>

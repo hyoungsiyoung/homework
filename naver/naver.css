@@ -1,0 +1,164 @@
+/* 공통 스타일 */
+body {
+    font-size: 1rem;
+    color: #181818;
+}
+
+.container {
+    max-width: 500px;
+    margin: 0 auto;
+    padding: 1rem;
+}
+
+.logo {
+    width: 230px;
+    height: auto;
+    margin: 0 auto 2rem;
+}
+
+.form-group {
+    margin-bottom: 1rem;
+}
+
+.form-group input {
+    width: 100%;
+    padding: 0 1.25rem;
+    border: 1px solid #dadada;
+    font-size: 14px;
+    height: 45px;
+    box-sizing: border-box;
+
+    &:focus {
+        outline: 0;
+    }
+
+    &:focus-visible {
+        outline: 2px solid #03cf5d;
+        background-color: #e9f0fd;
+    }
+}
+
+
+button {
+    display: block;
+    width: 100%;
+    border: none;
+    background-color: #03cf5d;
+    color: #fff;
+    height: 45px;
+    cursor: pointer;
+    margin-top: 1.25rem;
+
+    &:focus {
+        outline: 0;
+    }
+
+    &:focus-visible {
+        outline: 2px solid #24388d;
+    }
+}
+
+.options {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 1rem;
+}
+
+/* 로그인 기억하기 */
+.remember-me {
+    display: flex;
+    align-items: center;
+}
+
+.remember-me input[type="checkbox"] {
+    appearance: none;
+    width: 24px;
+    height: 24px;
+    border: none;
+    margin-right: 0.5rem;
+    cursor: pointer;
+
+    &:focus {
+        outline: 0;
+    }
+
+    &:focus-visible {
+        outline: 2px solid #24388d;
+    }
+}
+
+.remember-me input[type="checkbox"]:checked {
+    background-image: url('icons/checked.svg');
+}
+
+.remember-me input[type="checkbox"]:not(:checked) {
+    background-image: url('icons/unchecked.svg');
+}
+
+
+/* IP 보안 */
+.ip-security {
+    display: flex;
+    align-items: center;
+    max-width: 100%;
+    gap: 10px;
+}
+
+.ip-security a {
+    text-decoration: none;
+}
+
+.ip-security input[type="checkbox"] {
+    position: absolute;
+    opacity: 0;
+}
+
+.switch-label::before {
+    display: inline-block;
+    color: lightslategray;
+    cursor: pointer;
+    content:"OFF";
+}
+
+.ip-security input[type="checkbox"]:checked + label .switch-label::before {
+    color: #03cf5d;
+    content: "ON";
+}
+
+.ip-security input[type="checkbox"]:focus + label .switch-label,
+.ip-security input[type="checkbox"]:focus-visible + label .switch-label {
+    outline: 2px solid #24388d;
+}
+
+/* 모바일 스타일 */
+@media (max-width: 767px) {
+    .container {
+        max-width: none;
+        padding: 1rem 1.25rem;
+    }
+
+    .login-form {
+        max-width: 100%;
+    }
+
+    .ip-security {
+        display: none;
+    }
+
+    .options {
+        justify-content: end;
+    }
+}
+
+/* 데스크탑 스타일 */
+@media (min-width: 768px) {
+    .container {
+        padding: 2rem;
+    }
+
+    .login-form {
+        max-width: 500px;
+        margin: 0 auto;
+    }
+}

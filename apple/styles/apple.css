@@ -1,0 +1,206 @@
+@import url(reset.css);
+@import url(base.css);
+@import url(theme.css);
+
+/* 카드 레이아웃 */
+.cards-wrapper {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: var(--small-spacing);
+}
+
+.sm-cols-1 {
+  grid-column: span 1;
+}
+.sm-cols-2 {
+  grid-column: span 2;
+}
+
+@media (min-width: 1024px) {
+  .lg-cols-1 {
+    grid-column: span 1;
+  }
+  .lg-cols-2 {
+    grid-column: span 2;
+  }
+}
+
+/* 카드 컴포넌트 */
+.cards {
+  background-color: var(--black);
+  background-position: 50% 50%;
+  background-repeat: no-repeat;
+  background-size: cover;
+  text-align: center;
+}
+
+.card-box {
+  display: flex;
+  flex-direction: column;
+  height: var(--size);
+  padding-top: var(--large-spacing);
+}
+
+.card-name {
+  padding-bottom: var(--small-spacing);
+  font-size: var(--large-text);
+  font-weight: bold;
+}
+
+.card-description {
+  padding-bottom: var(--small-spacing);
+  font-size: var(--base-text);
+}
+
+.card-release-date {
+  padding-bottom: var(--small-spacing);
+  font-size: var(--small-text);
+  color: var(--gray);
+}
+
+@media (min-width: 1024px) {
+  .card-box {
+    padding-top: var(--extra-large-spacing);
+  }
+  .card-name {
+    font-size: var(--extra-large-text);
+  }
+  .card-description {
+    font-size: var(--medium-text);
+  }
+}
+
+/* 버튼 기본 디자인 */
+.button-wrapper {
+  display: flex;
+  justify-content: center;
+  gap: var(--base-spacing);
+}
+
+.button {
+  display: inline-block;
+  font-size: var(--xx-small-text);
+  padding: var(--x-small-spacing) var(--base-spacing);
+  border: 1px solid transparent;
+  border-radius: 50px;
+  transition: background 0.2s;
+}
+
+@media (min-width: 1024px) {
+  .button {
+    font-size: var(--x-small-text);
+  }
+}
+
+/* 콘텐츠 컬러 분기 */
+.cards-dark .card-box {
+  color: var(--white);
+}
+
+.cards-dark .button-more {
+  color: var(--white);
+  background-color: var(--blue-400);
+}
+
+.cards-dark .button-more:hover {
+  background-color: var(--blue-200);
+}
+
+.cards-dark .button-price {
+  color: var(--blue-100);
+  border-color: var(--blue-100);
+}
+
+.cards-dark .button-price:hover {
+  color: var(--white);
+  background-color: var(--blue-200);
+  border-color: var(--blue-200);
+}
+
+.cards-light .card-box {
+  color: var(--black);
+}
+
+.cards-light .button-more {
+  color: var(--white);
+  background-color: var(--black);
+}
+
+.cards-light .button-more:hover {
+  background-color: #313131;
+}
+
+.cards-light .button-price {
+  color: var(--black);
+  border-color: var(--black);
+}
+
+.cards-light .button-price:hover {
+  color: var(--white);
+  background-color: var(--black);
+}
+
+/* 각 카드 배경 */
+.cards-ipad-pro {
+  background-image: image-set(
+    url(../products/ipad_pro.jpeg) 1x,
+    url(../products/ipad_pro_2x.jpeg) 2x
+  );
+}
+.cards-ipad-air {
+  background-image: image-set(
+    url(../products/ipad_air.jpeg) 1x,
+    url(../products/ipad_air_2x.jpeg) 2x
+  );
+}
+.cards-iphone-15-pro {
+  background-image: image-set(
+    url(../products/iphone15_pro.jpeg) 1x,
+    url(../products/iphone15_pro_2x.jpeg) 2x
+  );
+}
+.cards-iphone-15 {
+  background-image: image-set(
+    url(../products/iphone15.jpeg) 1x,
+    url(../products/iphone15_2x.jpeg) 2x
+  );
+}
+.cards-watch {
+  background-image: image-set(
+    url(../products/apple_watch.jpeg) 1x,
+    url(../products/apple_watch_2x.jpeg) 2x
+  );
+}
+.cards-macbook-air {
+  background-image: image-set(
+    url(../products/macbook_air.jpeg) 1x,
+    url(../products/macbook_air_2x.jpeg) 2x
+  );
+}
+.cards-airpods-pro {
+  background-image: image-set(
+    url(../products/airpods_pro.jpeg) 1x,
+    url(../products/airpods_pro_2x.jpeg) 2x
+  );
+}
+
+@media (min-width: 1024px) {
+  .cards-ipad-pro {
+    background-image: image-set(
+      url(../products/ipad_pro_wide.jpeg) 1x,
+      url(../products/ipad_pro_wide_2x.jpeg) 2x
+    );
+  }
+  .cards-ipad-air {
+    background-image: image-set(
+      url(../products/ipad_air_wide.jpeg) 1x,
+      url(../products/ipad_air_wide_2x.jpeg) 2x
+    );
+  }
+  .cards-iphone-15-pro {
+    background-image: image-set(
+      url(../products/iphone15_pro_wide.jpeg) 1x,
+      url(../products/iphone15_pro_wide_2x.jpeg) 2x
+    );
+  }
+}
